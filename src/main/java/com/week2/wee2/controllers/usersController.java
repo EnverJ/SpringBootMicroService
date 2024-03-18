@@ -1,4 +1,4 @@
-package com.week2.wee2;
+package com.week2.wee2.controllers;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +18,7 @@ public class usersController {
     @GetMapping()
     public String getUsers(@RequestParam(value = "page") int pageNum, @RequestParam(value = "limit") int limitNum) {
         return "HTTP get request was sent for page " + pageNum + " and limit is " + limitNum;
-    // curl -X GET -H "Content-Type: application/json" 'http://localhost:8080/users?page=1&limit=10'
+        // curl -X GET -H "Content-Type: application/json" 'http://localhost:8080/users?page=1&limit=10'
     }
 
     @GetMapping(path = "/{userID}")  // path parameters
